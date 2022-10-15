@@ -18,12 +18,20 @@ class Products(db.Model):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        return render_template('Ravi_Nayak_Task1_40349442.html', price=100)
-    if request.method == 'POST':
-        return render_template('proceed.html')
+    # if request.method == 'POST':
+        # return render_template('Ravi_Nayak_Task1_40349442.html', price=100)
+    # if request.method == 'POST':
+    #     return render_template('proceed.html')
 
     return render_template('landingpage.html')
+
+@app.route("/form", methods=['GET', 'POST'])
+def form():
+    return render_template('Ravi_Nayak_Task1_40349442.html')
+
+@app.route("/proceed", methods=['GET', 'POST'])
+def proceed():
+    return render_template('proceed.html')
 
 
 if __name__ == "__main__":
