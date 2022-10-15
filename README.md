@@ -1,2 +1,4 @@
-# HackTheHub
-HACKATHONE
+# hackathon
+## benjamin, bruno, ravi, maricio
+
+kickstart!
