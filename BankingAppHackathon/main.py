@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request
+import requests
 #from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -18,11 +19,6 @@ class Products(db.Model):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    # if request.method == 'POST':
-        # return render_template('Ravi_Nayak_Task1_40349442.html', price=100)
-    # if request.method == 'POST':
-    #     return render_template('proceed.html')
-
     return render_template('landingpage.html')
 
 @app.route("/form", methods=['GET', 'POST'])
@@ -31,6 +27,12 @@ def form():
 
 @app.route("/proceed", methods=['GET', 'POST'])
 def proceed():
+    # formContent =  {"contractType":"housing","name":"Bruno","gender":"male","address":"Hack1 The Hub Rd, 13","amountPpm":100.0}
+    # formJson = request.form.to_dict(flat=False)
+
+    javaBackEndURL = 'http://localhost:8080/hackthehub/contractIt'
+    requests.post(javaBackEndURL, json = request.form)
+
     return render_template('proceed.html')
 
 
