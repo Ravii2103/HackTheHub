@@ -1,6 +1,6 @@
-{% extends 'signupBase.html' %}
+<!-- {% extends 'signupBase.html' %} -->
 
-{% block head%}
+<!-- {% block head%} -->
     <head>
 
         <title>Checkout</title>
@@ -136,77 +136,12 @@
 
         </style>
 
-        <script>
-
-            function validate() {
-
-                var emid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-                var phn = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-
-
-                let na = document.getElementById('1n');
-                let nav = na.value;
-                let ma = document.getElementById('2m');
-                let mav = ma.value;
-                let ema = document.getElementById('2em');
-                let emav = ema.value;
-                let ssa = document.getElementById('3ss');
-                let ssav = ssa.value;
-                let ada = document.getElementById('4ad');
-                let adav = ada.value;
-                let pca = document.getElementById('5pc');
-                let pcav = pca.value;
-                
-                let err1 = document.getElementById('error1n');
-                let err2 = document.getElementById('error2m');
-                let err2e = document.getElementById('error2em');
-                let err3 = document.getElementById('error3ss');
-                let err4 = document.getElementById('error4ad');
-                let err5 = document.getElementById('error5pc');
-            
-
-
-                if (nav=="") {
-                    err1.innerHTML=('* Please fill the details.');       
-                }
-                else if(mav=="") {
-                    err2.innerHTML=('* Please fill the details.');
-                }
-                else if (!mav.match(phn)) {
-                    err2.innerHTML=('* Please enter a valid phone number.');
-                }
-                else if(emav==""){
-                    err2e.innerHTML=('* Please fill the details.');
-                }
-                else if(!emav.match(emid)){
-                    err2e.innerHTML=('* Please enter correct email.');
-                }
-                else if(ssav=="") {
-                    err3.innerHTML=('* Please fill the details.');
-                }
-                else if(ssav>12 || ssav <6) {
-                    err3.innerHTML=('* Product size out of stock.');
-                }
-                else if(adav=="") {
-                    err4.innerHTML=('* Please fill the details.');
-                }
-                else if(pcav=="") {
-                    err5.innerHTML=('* Please fill the details.');
-                }
-                else if(pcav.length!=7){
-                    err5.innerHTML=('* Please enter correct Post code.');
-                }
-                else {
-                    console.log('No errors detected')
-                    return true; 
-                }
-                return false; 
-                }
-
-        </script>
+        <script>     </script>
     </head>
-{% endblock %}
-{% block body%}
+    
+<!-- {% endblock %}
+{% block body%} -->
+
     <body>
        
         <div class="container">
@@ -214,25 +149,25 @@
                 <div class="title"> <strong>Enter Consortion</strong> </div>
                 <br><br><br>
 
-            <form action="/hackthehub/subscribe" method="post" enctype="application/json" onsubmit = "return validate();" >
+            <form action="/hackthehub/subscribe" method="post" enctype="application/json" >
 
                 <div class="user-details">
 
                     <div class="input-box">
-                      <label for="Item Name"  class="details">Item Name </label>     
-                      <input type="text" id="Item Name" name="Item Name" value={{price}}>
+                      <label for="Item Name"  class="details">Contract Type </label>     
+                      <input type="text" id="contractType" name="contractType" placeholder="Contract Type">
                     </div>
                     <div class="input-box">
-                      <label for="1n"  class="details">Full Name </label>             <span id="error1n"></span>
+                      <label for="1n"  class="details">Full Name </label>   
                       <input type="text" id="1n" name="Full Name" placeholder="Enter your name" >
                     </div>
                     <div class="input-box">
-                        <label for="2m"  class="details">Mobile Number </label>      <span id="error2m"></span>
+                        <label for="2m"  class="details">Mobile Number </label>   
                         <input type="text" id="2m"  name= "Mobile Number" placeholder="Enter your number" >
                     </div>
                     <div class="input-box">
-                        <label for="2em"  class="details">Email Id </label>      <span id="error2em"></span>
-                        <input type="text" id="2em"  name= "Email Id" placeholder="Enter your email" >
+                        <label for="3ss"  class="details">Amount To Be Paid Per month: </label>  
+                        <input type="number" id="3ss" name="ppm" placeholder="Enter your Amount" >
                     </div>
                     <div class="gender-details">
                         <span class="gender-title">Gender :   </span>    
@@ -246,12 +181,8 @@
                         <br>
                     </div>
                     <div class="input-box">
-                      <label for="4ad"  class="details">Address </label>                  <span id="error4ad"></span>
+                      <label for="4ad"  class="details">Address </label>   
                       <input type="text" id="4ad" name="Address" placeholder="Enter your Address" >
-                    </div>
-                    <div class="input-box">
-                        <label for="5pc"  class="details">Enter Postcode </label>         <span id="error5pc"></span>
-                      <input type="text" id="5pc" name="Postcode" placeholder="Enter Postcode" >
                     </div>
                 </div>
 
@@ -263,6 +194,6 @@
         </div>
 
     </body>
-{% endblock%}
+<!-- {% endblock%} -->
 
 
