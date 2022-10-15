@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Checkout</title>
+        <title>Details</title>
 
         <style>
 
@@ -138,71 +138,7 @@
 
         <script>
 
-            function validate() {
-
-                var emid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-                var phn = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-
-
-                let na = document.getElementById('1n');
-                let nav = na.value;
-                let ma = document.getElementById('2m');
-                let mav = ma.value;
-                let ema = document.getElementById('2em');
-                let emav = ema.value;
-                let ssa = document.getElementById('3ss');
-                let ssav = ssa.value;
-                let ada = document.getElementById('4ad');
-                let adav = ada.value;
-                let pca = document.getElementById('5pc');
-                let pcav = pca.value;
-                
-                let err1 = document.getElementById('error1n');
-                let err2 = document.getElementById('error2m');
-                let err2e = document.getElementById('error2em');
-                let err3 = document.getElementById('error3ss');
-                let err4 = document.getElementById('error4ad');
-                let err5 = document.getElementById('error5pc');
             
-
-
-                if (nav=="") {
-                    err1.innerHTML=('* Please fill the details.');       
-                }
-                else if(mav=="") {
-                    err2.innerHTML=('* Please fill the details.');
-                }
-                else if (!mav.match(phn)) {
-                    err2.innerHTML=('* Please enter a valid phone number.');
-                }
-                else if(emav==""){
-                    err2e.innerHTML=('* Please fill the details.');
-                }
-                else if(!emav.match(emid)){
-                    err2e.innerHTML=('* Please enter correct email.');
-                }
-                else if(ssav=="") {
-                    err3.innerHTML=('* Please fill the details.');
-                }
-                else if(ssav>12 || ssav <6) {
-                    err3.innerHTML=('* Product size out of stock.');
-                }
-                else if(adav=="") {
-                    err4.innerHTML=('* Please fill the details.');
-                }
-                else if(pcav=="") {
-                    err5.innerHTML=('* Please fill the details.');
-                }
-                else if(pcav.length!=7){
-                    err5.innerHTML=('* Please enter correct Post code.');
-                }
-                else {
-                    console.log('No errors detected')
-                    return true; 
-                }
-                return false; 
-                }
-
         </script>
     </head>
     <body>
@@ -212,7 +148,7 @@
                 <div class="title"> <strong>Your Details</strong> </div>
                 <br><br><br>
 
-            <form action="mailto:" method="post" enctype="text/plain" onsubmit = "return validate();" >
+            <form action=>
 
                 <div class="user-details">
 
@@ -244,17 +180,17 @@
                         <br>
                     </div>
                     <div class="ShoeW">
-                        <label for="Foot Width">Foot Width:</label>
-                        <select name="FootWidth" id="Foot Width" placeholder="hhhhhhhhhh">
-                            <option value="narrow">Narrow</option>
-                            <option value="medium">Medium</option>
-                             <option value="wide">Wide</option>
+                        <label for="Consertion">Type:</label>
+                        <select  placeholder="">
+                            <option value="Refurbishment">Refurbishment</option>
+                            <option value="Housing">Housing</option>
+                             <option value="Motorcycle">Motorcycle</option>
                             <option value="ultrawide">UltraWide</option>
                         </select>       
                     </div>
                     <div class="input-box">
-                        <label for="3ss"  class="details">Shoe Size (UK): </label>        <span id="error3ss"></span>
-                        <input type="number" id="3ss" name="Shoe Size" placeholder="Enter your Shoe Size" >
+                        <label for="3ss"  class="details">Amount To Be Paid Per month: </label>        <span id="error3ss"></span>
+                        <input type="number" id="3ss" name="ppm" placeholder="Enter your Amount" >
                     </div>
                     <div class="input-box">
                       <label for="4ad"  class="details">Address </label>                  <span id="error4ad"></span>
