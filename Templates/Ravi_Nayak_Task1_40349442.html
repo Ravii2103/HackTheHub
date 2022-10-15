@@ -64,7 +64,7 @@
             body{
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #cce6e6, #df539b , #9b1717);
+            background: linear-gradient(135deg, #cce6e6, #df539b , #6f179b);
             display: flex;
             padding: 10px;
             box-sizing: border-box;
@@ -83,7 +83,7 @@
              height: 30px;
              margin-left: 25px;
              padding: auto;
-             background: linear-gradient( 90deg ,  #cce6e6, #fda24c);
+             background: linear-gradient( 90deg ,  #cce6e6, #686563);
             }
 
 
@@ -92,12 +92,12 @@
             }
 
             input{
-                background: linear-gradient( 90deg ,  #cce6e6, #fda24c );
+                background: linear-gradient( 90deg ,  #cce6e6, #827a73 );
             }
 
 
 
-             .button input{
+            .button input{
             height: 100%;
             width: 100%;
             border-radius: 5px;
@@ -112,8 +112,8 @@
             }
 
 
-             .button input:hover{
-                background: linear-gradient( #5d9b17 , #634ddd );
+            .button input:hover{
+              background: linear-gradient( #5d9b17 , #634ddd );
             }
 
 
@@ -146,10 +146,11 @@
        
         <div class="container">
 
-                <div class="title"> <strong>Enter Consortion</strong> </div>
-                <br><br><br>
+        <div class="title"> <strong>Enter Consortion</strong> </div>
+         <br><br><br>
 
-            
+        <form action="proceed.html" >
+
                 <div class="user-details">
 
                     <div class="input-box">
@@ -158,32 +159,32 @@
                     </div>
                     <br>
                     <div class="input-box">
-                      <label for="1n"  class="details">Full Name </label>   
-                      <input type="text" id="1n" name="Full Name" placeholder="Enter your name" >
+                      <label for="Name"  class="details">Full Name </label>   
+                      <input type="text" id="name" name="Full Name" placeholder="Enter your name" >
                     </div>
                     <br>
                     <div class="input-box">
-                        <label for="gender"  class="details">Gender.</label>   
+                        <label for="gender"  class="details">Gender</label>   
                         <input type="text" id="gender" name="gender" placeholder="Your gender" >
                       </div>
                       <br>
                     <div class="input-box">
-                      <label for="4ad"  class="details">Address </label>   
-                      <input type="text" id="addre" name="Address" placeholder="Enter your Address" >
+                      <label for="Address"  class="details">Address </label>   
+                      <input type="text" id="address" name="Address" placeholder="Enter your Address" >
                     </div>
                     <br>
                     <div class="input-box">
-                        <label for="3ss"  class="details">Amount To Be Paid Per month (in $) </label>  
+                        <label for="Amount"  class="details">Amount To Be Paid Per month (in $) </label>  
                         <input type="number" id="amnt" name="ppm" placeholder="Enter your Amount" >
                     </div>
                 </div>
 
                 <div class="button">
-                  <a href="proceed.html">
                     <input type="submit" value="Proceed">
-                  </a>
                 </div>
-                    
+               
+        </form>
+                
             
         </div>
 
